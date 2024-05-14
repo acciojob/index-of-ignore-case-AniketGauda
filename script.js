@@ -1,5 +1,16 @@
 function indexOfIgnoreCase(s1, s2) {
   // write your code here
+	s1 = s1.toLowerCase();
+    s2 = s2.toLowerCase();
+    let ans=-1;
+    for(let i=0;i<=s1.length-s2.length;i++){
+        let s = s1.substring(i,i+s2.length);
+        if(s.localeCompare(s2)==0){
+            ans=i;
+            break;
+        }
+    }
+    return ans;
 }
 
 // Please do not change the code below
